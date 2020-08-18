@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> Alfred's Assignment 7 </title>
+  <!-- Include external libraries -->
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/updated-cuon-utils.js"></script>
+  <script src="lib/cuon-matrix.js"></script>
+
+  <!-- Include main program -->
+  <script src="prog/main.js"></script>
+
+  <!-- Include tick function -->
+  <script src="prog/tick.js"></script>
+
+  <!-- Include internal functions -->
+  <script src="prog/eventFunctions.js"></script>
+  <script src="prog/glslFunctions.js"></script>
+  <script src="prog/htmlFunctions.js"></script>
+
+  <!-- Include scene objects -->
+  <script src="prog/scene/scene.js"></script>
+  <script src="prog/scene/camera.js"></script>
+  <script src="prog/scene/vertex.js"></script>
+  <script src="prog/scene/geometry.js"></script>
+
+  <!-- Include animated geometric objects -->
+  <script src="prog/geometries/cube.js"></script>
+  <script src="prog/geometries/tiltedCube.js"></script>
+  <script src="prog/geometries/staticMap.js"></script>
+  <script src="prog/geometries/blitz.js"></script>
+
+  <!-- Include shaders -->
+  <script src="prog/shaders.js"></script>
+
+  <!-- OBJ Loading -->
+  <script src="lib/obj_loading/webgl-obj-loader.js"></script>
+  <script src="lib/obj_loading/loadedOBJ.js"></script>
+</head>
+
+<body onload="main()" style="margin:0;">
+  <p> Assignment 7</br>Alfred Lam</br>12/2/18</p>
+
+  <!-- YOUR CODE HERE -->
+  <canvas id="canv" style="display:block; width:100vw; height:100vh; ">
+    Please use a browser that supports canvas!
+  </canvas>
+
+  <div>
+    <h2>Instructions</h2>
+    <p>You are a lonely robot in a foggy space maze! You must find the 3 treasures hidden around the maze</br>
+      in order to escape! However, due to malfunctions in your software, you can only face forward! Luckily,</br>
+      you have your trusty satellite buddy to help you search. Press the UP ARROW to switch views! Click on the</br>
+      3 hidden treasures, which will send you an alert when found, to win the game! Good luck!</br></br>
+      WASD - move</br>
+      IJKL - move 3rd person camera</br>
+      UP ARROW - swap cameras</br>
+    </p>
+  </div>
+
+  <label for="fieldOfView">FOG Distance:</label>
+  <input type="range" min="5" max="150" value="10" class="slider" id="fieldOfView">
+
+</body>
+
+</html>
